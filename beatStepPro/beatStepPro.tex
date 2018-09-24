@@ -1,0 +1,129 @@
+
+\documentclass{tufte-handout}
+
+
+%\geometry{showframe}% for debugging purposes -- displays the margins
+
+\usepackage{amsmath}
+
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+\hypersetup{colorlinks}
+\usepackage{tikz} 
+\usepackage{geometry}
+\geometry{a4paper, portrait}
+
+\title{BeatStep Pro}
+\author[letGo Studios]{letGo Studios}
+%fuzzySi
+%letGo Studios
+
+
+% The following package makes prettier tables.  We're all about the bling!
+\usepackage{booktabs}
+
+% The units package provides nice, non-stacked fractions and better spacing
+% for units.
+\usepackage{units}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+
+% Small sections of multiple columns
+\usepackage{multicol}
+
+\usepackage{tgbonum}
+
+% These commands are used to pretty-print LaTeX commands
+\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+
+\renewcommand{\baselinestretch}{0.9} %sets line spacing
+
+\begin{document}
+
+%\maketitle% this prints the handout title, author, and date
+
+
+%\printclassoptions
+
+\section{Beatstep Pro}
+
+\begin{description}
+\item[metronome on/off] SHIFT \& TAP  (on MIDI ch 10)
+\item[set fine tempo] SHIFT \& RATE knob
+\item[send all notes off] press STOP 3 times quickly
+\item[restarts all 3 sequencers] SHIFT \& PLAY
+\end{description}
+\marginnote{Use drum pad 8 to set triggers every $x$ notes}
+
+\begin{description}
+\item[clear pattern] SHIFT \& Step 1
+\item[step recording] hold Step $x$ \& press pad - remembers velocity too
+\item[TIE notes] hold start \& end Steps
+\item[set TIE or SLIDE] knob sets gate time 1-99\%, TIE, SLIDE \\
+neither TIE \& GLIDE send new gate\\
+SLIDE does 60ms portamento on CV\\
+\item[change octave of keyboard] OCT- \& OCT+ (pads 7 \& 8 top row)
+{\setlength\itemindent{8pt} \item[reset octave to default] press OCT- \& OCT+ together}
+\item[set seq length] press LaST STeP then Step $x$
+\item[seq length >16] press both << \& >> to toggle sequence follow mode \\
+(LED is lit in sequence follow mode) \\
+hold LaST STeP, press >>, to get to correct part of 64 steps\\
+press Step $x$, release LaST STeP\\
+\item[set scale] SHIFT \& top row pad
+\item[set direction] SHIFT \& pads 1-3: forward, reverse, alternating
+\item[set time division] SHIFT \& lower pads: 1/4, 1/8, 1/16 (default), 1/32
+\item[set to triplets] SHIFT \& triplet pad
+\end{description}
+
+\subsection{Channel settings}
+
+\begin{description}
+\item[set offset pitch/vel/gate for all notes] SHIFT \& Knob 1
+\item[set absolute pitch/vel/gate for all notes] SHIFT \& Knob 2
+\item[toggle setting Swing / Probability / Randomness for all vs current track] press CURRENT TRACK (lights up)
+\item[transpose] press transpose link \& key (in Seq mode)\\
+\marginnote{Transpose latch on, set in MCC}
+\item[chain patterns] SHIFT \& hold Seq1/2/Drum, then select Steps in order, will play eg. $x, y, x, z$
+\end{description}
+
+
+\subsection{Drum seq }
+\begin{description}
+\item[mute individual drum] DRUM \& MUTE \& pad
+\item[select drum without playing] hold DRUM \& press pad
+\item[move beats forward / backwards] pitch knob moves drums 
+\end{description}
+\marginnote[-2cm]{Top left 4 pads C\# to F\# output MIDI notes 44 - 47, nordDrums set to that now}
+
+
+\subsection{Saving \& loading}
+\marginnote{Projects contain 3 sequencers x 16 patterns in each}
+\begin{description}
+\item[save pattern] shows dot if edited, hold SAVE, Step $x$ to store or copy to slot
+\item[copy to other sequencer] hold SAVE, Seq2 then Step $x$
+\item[copy pattern into next step group] SHIFT >> 
+\item[save project] hold SAVE, hold PROJECT, Step $x$ button to store
+\item[load project] hold PROJECT \& Step $x$ to recall
+\end{description}
+
+
+\subsection{Set in MCC}
+Clock out set to 24 pulse per quarter note ppqn, can't change from panel so stay at this \& divide\\
+
+
+
+\end{document}
