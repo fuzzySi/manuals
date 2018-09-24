@@ -1,0 +1,99 @@
+
+\documentclass{tufte-handout}
+
+%\geometry{showframe}% for debugging purposes -- displays the margins
+
+\usepackage{amsmath}
+
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+\hypersetup{colorlinks}
+\usepackage{tikz} 
+\usepackage{geometry}
+\geometry{a4paper, portrait}
+
+\title{JamMan}
+\author[letGo Studios]{letGo Studios}
+%fuzzySi
+
+% The following package makes prettier tables.  We're all about the bling!
+\usepackage{booktabs}
+
+% The units package provides nice, non-stacked fractions and better spacing
+% for units.
+\usepackage{units}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+% Small sections of multiple columns
+\usepackage{multicol}
+
+\usepackage{tgbonum}
+
+% These commands are used to pretty-print LaTeX commands
+\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+
+\renewcommand{\baselinestretch}{0.8} %sets line spacing
+
+\begin{document}
+
+%\maketitle% this prints the handout title, author, and date
+
+
+%\printclassoptions
+
+
+\section{JamMan}
+
+\begin{description}
+\item[select loop] up \& down,1-200 int, same on card \\
+(LOOP \& SINGLE leds off if slot empty)
+\item[cue loop] up/down, will play next time around
+\item[record loop] press once, again to stop. red LED - recording, flashing - armed
+\item[overdub] press again, yellow LED
+\marginnote{store before overdubbing so can clear to get back to loop}
+\item[undo overdub] press \& hold until yellow {\fontfamily{qcr}\selectfont und}, same again to redo {\fontfamily{qcr}\selectfont rEd}
+\item[clear loop] press then hold {\fontfamily{qcr}\selectfont cLr}
+\item[store loop] up/down then store twice
+\item[copy loop] up/down, store, up/down then store again
+\item[erase loop] hold store {\fontfamily{qcr}\selectfont ErL}, press again {\fontfamily{qcr}\selectfont E?} and again {\fontfamily{qcr}\selectfont dEl}
+\end{description}
+
+\subsection{Tempo}
+
+time stretch phrase by changing tempo while playing \\
+\marginnote{hold tempo to get back to normal tempo, or store to keep}
+quantised looping - tap tempo first, or set tempo (setup twice {\fontfamily{qcr}\selectfont tpo}, \& up/down, store twice)\\
+free looping - find new memory location, press to record, again to play, twice quickly to loop\\
+
+\subsection{Other settings}
+\begin{description}
+\item[{\fontfamily{qcr}\selectfont LoP / Sin}] set loop / single:  up/down to change to single phrase
+\item[{\fontfamily{qcr}\selectfont tPO}] tempo - setup until {\fontfamily{qcr}\selectfont tPO}, up/down, store twice
+\item[{\fontfamily{qcr}\selectfont SiG}] time signature - SETUP {\fontfamily{qcr}\selectfont SiG}, up/down to select beats per measure, store twice
+\item[{\fontfamily{qcr}\selectfont rHY}] metronome / rhythm track
+\item[{\fontfamily{qcr}\selectfont StP}] stop modes - {\fontfamily{qcr}\selectfont FAd}es over 10 secs, {\fontfamily{qcr}\selectfont Fin}ish at end of loop, or {\fontfamily{qcr}\selectfont InS}tantly
+\item[{\fontfamily{qcr}\selectfont rSE}] reverse loop, up/down to reverse
+\item[{\fontfamily{qcr}\selectfont Arc}] autorecord once signal starts 
+\item[{\fontfamily{qcr}\selectfont PdL}] 3 way external pedal: MODE (tap tempo, stop, undo), DOWN, UP
+\item[{\fontfamily{qcr}\selectfont rdP / rPd}] after record, straight into overdub, or play
+\end{description}
+
+STORE for 6 secs to format card. {\fontfamily{qcr}\selectfont nF} if not formatted, store {\fontfamily{qcr}\selectfont F?} store to format \\
+wipe all loops: hold store until {\fontfamily{qcr}\selectfont Eri / ErC} (Erase Internal / Card) then hold store until {\fontfamily{qcr}\selectfont 'BuS}y' \\
+
+
+\end{document}
